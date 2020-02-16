@@ -1,0 +1,55 @@
+GET http://localhost:3001/user
+Accept: application/json
+
+###
+
+POST http://localhost:3001/user
+Content-Type: application/json
+
+{
+  "id": "admin",
+  "name": "管理员",
+  "password": "123456",
+  "telephone": "13910715083",
+  "mail": "kangwei@xinhua.org",
+  "role": 999
+}
+###
+
+POST http://localhost:3001/user
+Content-Type: application/json
+
+{
+"id": "kangwei",
+"name": "康威",
+"password": "123456",
+"telephone": "13910715083",
+"mail": "kangwei@xinhua.org"
+}
+
+###
+POST http://localhost:3001/user/delete
+Content-Type: application/json
+
+{
+  "id": "kangwei",
+  "name": "康威",
+  "password": "123456",
+  "telephone": "13910715083",
+  "mail": "kangwei@xinhua.org"
+}
+
+###
+
+POST http://localhost:3001/user/update
+Content-Type: application/json
+
+{
+  "id": "kangwei",
+  "name": "康威",
+  "password": "123456",
+  "telephone": "13910716081",
+  "mail": "kangwei@xinhua.org"
+}
+
+###

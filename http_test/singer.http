@@ -1,0 +1,43 @@
+GET http://localhost:3001/singer
+Accept: application/json
+
+###
+
+POST http://localhost:3001/singer
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "齐秦",
+  "age": "50",
+  "introduction": "歌星",
+  "songs": ["北方的狼", "Hello World"]
+}
+
+###
+POST http://localhost:3001/singer/delete
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "齐秦",
+  "age": "55",
+  "introduction": "北方的狼专辑",
+  "songs": []
+}
+
+
+###
+
+POST http://localhost:3001/singer/update
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "康威",
+  "age": "47",
+  "introduction": "IT",
+  "songs": ["小小鸟","两只老虎"]
+}
+
+###

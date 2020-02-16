@@ -1,0 +1,46 @@
+GET http://localhost:3001/album
+Accept: application/json
+
+###
+
+POST http://localhost:3001/album
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "齐秦专辑",
+  "Author": "齐秦",
+  "age": "2010",
+  "introduction": "北方的狼专辑",
+  "songs": []
+}
+
+###
+POST http://localhost:3001/album/delete
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "齐秦专辑",
+  "Author": "齐秦",
+  "age": "2010",
+  "introduction": "北方的狼专辑",
+  "songs": []
+}
+
+
+###
+
+POST http://localhost:3001/album/update
+Content-Type: application/json
+
+{
+  "id": "0001",
+  "name": "齐秦专辑",
+  "author": "齐秦",
+  "age": "2012",
+  "introduction": "北方的狼专辑",
+  "songs": ["北方的狼","相思是一种病"]
+}
+
+###

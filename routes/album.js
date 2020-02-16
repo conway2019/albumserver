@@ -9,15 +9,20 @@ router.get('/', function (req, res) {
 });
 
 router.post("/", function (req, res) {
-    let album = req.body
-    albumDao.addAlbum(album, function (newAlbum) {
+    albumDao.addAlbum(req.body, function (newAlbum) {
         res.json(newAlbum)
     })
 })
 
-router.delete("/:id", function (req, res) {
-    let id = req.params.id
-    albumDao.deleteAlbum(id, function (obj) {
+router.post("/update/", function (req, res) {
+    albumDao.updateAlbum(req.body, function (newAlbum) {
+        res.json(newAlbum)
+    })
+})
+
+router.post("/delete/", function (req, res) {
+    console.log(req.body.id);
+    albumDao.deleteAlbum(req.body.id, function (obj) {
         res.json(obj)
     })
 })

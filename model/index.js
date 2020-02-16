@@ -1,16 +1,34 @@
 const mongoose = require("mongoose")
 
-let AlbumSchema = mongoose.Schema({
-    album_id: String,
-    album_name: String,
-    public_time: String,
-    week: Number,
-    price: Number,
-    cover: String,
-    singers: {
-        singer_id: String,
-        singer_name: String
-    }
+//歌星
+let SingerSchema = mongoose.Schema({
+    id: String,
+    name: String,
+    age: Number,
+    introduction: String,
+    songs: []
 })
 
-mongoose.model("albums", AlbumSchema)
+//专辑
+let AlbumSchema = mongoose.Schema({
+    id: String,
+    name: String,
+    author: String,
+    age: String,
+    introduction: String,
+    songs: []
+})
+
+//用户管理
+let UserSchema = mongoose.Schema({
+    id: String,
+    name: String,
+    password: String,
+    phone: String,
+    mail: String,
+    role: {type: Number, default: 0}
+})
+
+mongoose.model("singer", SingerSchema)
+mongoose.model("album", AlbumSchema)
+mongoose.model("user", UserSchema)

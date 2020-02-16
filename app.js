@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var albumsRouter = require('./routes/albums');
+var userRouter = require('./routes/user');
+var albumRouter = require('./routes/album');
+var singerRouter = require('./routes/singer');
 
 var app = express();
 
@@ -23,7 +24,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/albums', albumsRouter);
+app.use('/user', userRouter);
+app.use('/album', albumRouter);
+app.use('/singer', singerRouter);
 
 module.exports = app;
