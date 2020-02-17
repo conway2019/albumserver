@@ -1,4 +1,4 @@
-const mongo = "mongodb://106.54.230.45:27017/music"
+const mongo = "mongodb://106.54.230.45:17027/music"
 const mongoose = require("mongoose")
 const http = require("http")
 
